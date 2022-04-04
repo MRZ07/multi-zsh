@@ -64,4 +64,3 @@ Now you can start creating the specific preconfigs and modules of your choice an
 
 ## Note
  - The filenames of the `.sh` files (preconfigs and modules) should not contain whitespaces
- - 
