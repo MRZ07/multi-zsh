@@ -1,9 +1,12 @@
 # multi-zsh
-A micro framework to run the same zsh configuration on multiple operating systems
+> A micro framework to run the same zsh configuration on multiple
+> operating systems
 
-ZSH is present on several operating systems. Many commands are the same on each platform, but some are operating system or setup specific. To solve this problem multi-zsh was developed.
+## Problem
+ZSH is present on several operating systems. Many commands are the same on each platform, but some are operating system or setup specific. In addition, the configuration of zsh within one .zshrc file is becoming increasingly inflexible, complex and inefficient. To solve this problems, multi-zsh was developed.
 
-Here are some of the features:
+## Features 
+**Here are some of the key features:**
 
  - Central configuration of ZSH
  - Cross-platform configuration of ZSH
@@ -17,6 +20,8 @@ Here are some of the features:
 ## Folder Structure
 ```
 📁 zsh: Contains the whole zsh configuration
+│
+├── 📄 .zshrc
 │
 ├── 📁 preload_configs: Contain preloaded configurations
 │		├── common:  Insert common preload configs here (LOADED FOR ALL PLATTFORMS)
