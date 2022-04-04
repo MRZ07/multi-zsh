@@ -7,6 +7,7 @@ Here are some of the features:
 
  - Central configuration of ZSH
  - Cross-platform configuration of ZSH
+ - Manage aliases and functions flexibly via files
  - Compatible with all frameworks such as oh-my-zsh
  - The entire zsh configuration becomes portable in just one folder
  - Cross maintenance of the different configurations no matter from which or for which system
@@ -15,28 +16,34 @@ Here are some of the features:
 
 ## Folder Structure
 ```
-├── zsh: Contains the whole zsh configuration
-
-	├── preload_configs: Contain preloaded configurations
-		├── common: Insert common preload configs here (LOADED FOR ALL PLATTFORMS)
-		├── linux: Insert linux specific preload configs here
-		├── macos: Insert macos specific preload configs here
-		├── windows: Insert windows specific preload configs here
-		└── ...
-		
-	├── zsh_modules: Contains aliases, functions etc.
-		├── common: Insert common moduls here, useful for cross-platform software like npm, yarn etc. (LOADED FOR ALL PLATTFORMS)
-			  ├── yarn.sh
-        ├── npm.sh
-			  └── ...
-		├── linux: Insert linux specific modules here
-        ├── apt.sh
-			  └── ...
-		├── macos: Insert macos specific modules here
-        ├── brew.sh
-			  └── ...
-		├── windows: Insert windows specific modules here
-		└── ...
+📁 zsh: Contains the whole zsh configuration
+│
+├── 📁 preload_configs: Contain preloaded configurations
+│		├── common:  Insert common preload configs here (LOADED FOR ALL PLATTFORMS)
+│		├── linux:   Insert linux specific preload configs here
+│		├── macos:   Insert macos specific preload configs here
+│		├── windows: Insert windows specific preload configs here
+│		└── ... Other folders based on zsh's $OSPATH
+│		
+├── 📁 zsh_modules: Contains aliases, functions etc.
+│  		 │  
+│                ├── 📁 common: Insert common moduls here, useful for cross-platform software like npm, yarn etc. (LOADED FOR ALL PLATTFORMS)
+│		 │	  ├── yarn.sh
+│       	 │   	  ├── npm.sh
+│		 │	  └── ...
+│  		 │  
+│		 ├── 📁 linux: Insert linux specific modules here
+│       	 │	  ├── apt.sh
+│		 │	  └── ...
+│  		 │  
+│		 ├── 📁 macos: Insert macos specific modules here
+│        	 │	  ├── brew.sh
+│		 │	  └── ...
+│  		 │  
+│		 ├── 📁 windows: Insert windows specific modules here
+│		 │	  └── ...
+│  		 │  
+│  		 └── ... Other folders based on zsh's $OSPATH
 ```
 
 ## Setup
@@ -52,4 +59,4 @@ Now you can start creating the specific preconfigs and modules of your choice an
 
 ## Note
  - The filenames of the `.sh` files (preconfigs and modules) should not contain whitespaces
-
+ - 
