@@ -1,5 +1,5 @@
 # multi-zsh
-> A micro framework to run the same zsh configuration on multiple
+> A portable micro framework to share the same zsh configuration over multiple
 > operating systems
 
 ## Problem
