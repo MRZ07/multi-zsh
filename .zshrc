@@ -32,7 +32,7 @@ for base_folder in "${BASE_FOLDERS[@]}"; do
       # Handle folders with spaces in their names too.
       # Ignore files and folders starting with #.
       find "$folder" -type d -name "#*" -prune -o -type f -name "*.sh" -print0 | while IFS= read -r -d '' script; do
-        echo "$script"
+        #echo "$script"
         source "$script"
       done
     fi
