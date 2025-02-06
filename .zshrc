@@ -3,7 +3,7 @@ MULTI_ZSH_FOLDER=$(dirname $(realpath $HOME/.zshrc)) # Read real filepath.
 MULTI_ZSH_PRELOAD_CONFIGS_FOLDER=${MULTI_ZSH_FOLDER}/preload_configs
 MULTI_ZSH_MODULES_FOLDER=${MULTI_ZSH_FOLDER}/modules
 
-local BASE_FOLDERS=("$PRELOAD_CONFIGS_FOLDER" "$MULTI_ZSH_MODULES_FOLDER")
+local BASE_FOLDERS=("$MULTI_ZSH_PRELOAD_CONFIGS_FOLDER" "$MULTI_ZSH_MODULES_FOLDER")
 
 local OS_SCRIPT_FOLDERS=("common" "$OSTYPE")
 
@@ -32,6 +32,7 @@ for base_folder in "${BASE_FOLDERS[@]}"; do
       # Handle folders with spaces in their names too.
       # Ignore files and folders starting with #.
       find "$folder" -type d -name "#*" -prune -o -type f -name "*.sh" -print0 | while IFS= read -r -d '' script; do
+        echo "$script"
         source "$script"
       done
     fi
